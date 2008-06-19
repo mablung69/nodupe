@@ -1,0 +1,12 @@
+#summary Different names, same person
+#labels Phase-Design
+
+= Introduction =
+
+The best way to match two contacts is intersecate phone or mail, but 
+
+*how to understand if two different names N, FN, NICKNAME refers to same person*?
+
+There're some algorithms that can help, one above other [http://en.wikipedia.org/wiki/New_York_State_Identification_and_Intelligence_System NYSIIS] which is still implemented in a python module.
+
+I'm still testing a way to rank the matching of two names using different f(nysiis(n))  using a comparableCard class...
