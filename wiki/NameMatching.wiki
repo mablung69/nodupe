@@ -25,7 +25,20 @@ N5: obiwankenobi@resistence.org
 N6: obiwan@kenobi.org
 }}}
 
-N1-N3 are quite easy, it's about splitting and intersecting. We must be careful on single names (eg. given names only) that should be resolved manually.
+N1-N3 are quite easy, it's about splitting and intersecting like the following
+{{{
+def matchName(n1,n2):
+    s1Us2 = set(n1).intersection(set(n2))
+    el = s1Us2.pop()
+    i1 = n1.index(el)
+    i2 = n2.index(el)
+    n11 = n1[i1:]+n1[:i1]
+    n21 = n2[i2:]+n2[:i2]
+    print "".join(n11).strip()
+    print "".join(n21).strip()
+}}}
+
+ We must be careful on single names (eg. given names only) that should be resolved manually.
 
 N4-N6 needs some hinting and playing with nysiis.
 
