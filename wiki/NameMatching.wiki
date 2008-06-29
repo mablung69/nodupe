@@ -11,17 +11,26 @@ There're some algorithms that can help, one above other [http://en.wikipedia.org
 
 I'm still testing a way to rank the matching of two names using different f(nysiis(n))  using a comparableCard class...
 
- = Some functions = 
-Some scoring functions follows, examples use this data
+ = Cases = 
+Here follows some data examples that we should try to match
 
 {{{
-N: Obi Wan Kenobi
-}}}
-and
-{{{
-N: Obi Wan
+N1: Obi Wan Kenobi
+N2: Obi Wan
+N3: Kenobi;Obi Wan
+
+
+N4: obiwan.kenobi@resistence.org
+N5: obiwankenobi@resistence.org
+N6: obiwan@kenobi.org
 }}}
 
+N1-N3 are quite easy, it's about splitting and intersecting. We must be careful on single names (eg. given names only) that should be resolved manually.
+
+N4-N6 needs some hinting and playing with nysiis.
+
+
+ = Functions =
 == set fraction ==
 
 splitting both names by space we get two sets: {obi,wan,kenobi} and {obi,wan}
