@@ -10,3 +10,23 @@ The best way to match two contacts is intersecate phone or mail, but
 There're some algorithms that can help, one above other [http://en.wikipedia.org/wiki/New_York_State_Identification_and_Intelligence_System NYSIIS] which is still implemented in a python module.
 
 I'm still testing a way to rank the matching of two names using different f(nysiis(n))  using a comparableCard class...
+
+ = Some functions = 
+Some scoring functions follows, examples use this data
+
+{{{
+N: Obi Wan Kenobi
+}}}
+and
+{{{
+N: Obi Wan
+}}}
+
+== set fraction ==
+
+splitting both names by space we get two sets: {obi,wan,kenobi} and {obi,wan}
+set_score =  #intersection / #union;  (ex #{obi,wan} / #{obi,wan,kenobi} )
+
+== list fraction ==
+same as set, but with list.
+list_score = #intersection / avg(#set1, #set2) (ex. 2 / 2.5)
